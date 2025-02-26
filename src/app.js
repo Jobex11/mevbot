@@ -1,9 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const errorHandler = require("./middlewares/errorHandler");
+const bot = require("./telegram/bot.js");
 
-dotenv.config();
 connectDB();
 
 const app = express();
